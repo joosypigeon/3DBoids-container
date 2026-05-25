@@ -1,4 +1,4 @@
-# Local environment
+# Local environment / secrets
 .env
 .env.*
 !.env.example
@@ -9,6 +9,11 @@
 # Core dumps
 core
 core.*
+
+# Build output
+build/
+*/build/
+cmake-build-*/
 
 # Temporary files
 *~

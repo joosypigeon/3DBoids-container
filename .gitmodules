@@ -1,0 +1,3 @@
+[submodule "3DBoids"]
+	path = 3DBoids
+	url = https://github.com/joosypigeon/3DBoids.git
