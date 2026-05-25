@@ -1,0 +1,27 @@
+services:
+  boids:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        BOIDS_UID: ${BOIDS_UID:-1000}
+        BOIDS_GID: ${BOIDS_GID:-1000}
+        BOIDS_USER: ${BOIDS_USER:-jerry}
+
+    image: 3dboids-container:latest
+    container_name: 3dboids-container
+
+    user: "${BOIDS_UID:-1000}:${BOIDS_GID:-1000}"
+
+    working_dir: /workspace
+
+    volumes:
+      - ./:/workspace
+
+    environment:
+      - GH_TOKEN=${GH_TOKEN}
+
+    stdin_open: true
+    tty: true
+
+    command: bash
