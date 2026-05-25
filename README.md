@@ -29,3 +29,10 @@ The project renders a flock of boids as 3D dart-like models. The simulation can 
         ├── torus.h
         ├── lighting.vs
         └── lighting.fs
+        
+        
+        
+cd /workspace/3DBoids
+cmake -S . -B build
+cmake --build build
+./build/boids
